@@ -14,8 +14,9 @@ namespace SeasonApp.Controllers
             return View();
         }
 
-        //GET: /Season/Show
+        //POST: /Season/Show
         // Acquire information about the season and send it to Show.cshtml
+        [HttpPost]
         public ActionResult Show(int? temperature) 
         {
             if (temperature == null) ViewBag.Temp = "unknown";
