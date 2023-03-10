@@ -9,8 +9,9 @@
 
 <h2>Show</h2>
 
-<p>The Temperature is @ViewBag.Temp</p>
-
 <p>The season is @ViewBag.Season !</p>
 
-<img src="@url" alt="@ViewBag.Season "width="500" height="250"/>
+<figure>
+    <figcaption class="temp">@ViewBag.Temp &#8451;</figcaption>
+    <img src="@url" alt="@ViewBag.Season " width="500" height="250" />
+</figure>
