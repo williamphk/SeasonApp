@@ -42,3 +42,9 @@ figure img {
     color: #ffffff;
     font-size: 30px;
 }
+
+.link {
+    position: absolute;
+    top: -20px;
+    right: 0px;
+}

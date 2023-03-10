@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using SeasonApp.Models;
 
 namespace SeasonApp.Controllers
 {
@@ -24,9 +25,9 @@ namespace SeasonApp.Controllers
 
             //we will to gather the season informatino from the temperature provided
             SeasonAPIController controller = new SeasonAPIController();
-            ViewBag.Season = controller.GetSeason(temperature);
+            Season SeasonInfo = controller.GetSeason(temperature);
 
-            return View();
+            return View(SeasonInfo);
         }
     }
 }
