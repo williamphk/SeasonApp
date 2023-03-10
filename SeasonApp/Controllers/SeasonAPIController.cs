@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using SeasonApp.Models;
+using System.Web.Http.Cors;
 
 namespace SeasonApp.Controllers
 {
@@ -28,7 +29,8 @@ namespace SeasonApp.Controllers
         /// </example>
         /// <returns>The associated season with the temperature</returns>
         [Route("api/SeasonAPI/GetSeason/{temperature}")]
-        [HttpGet]
+        //configure to accept information from a different domain
+        [EnableCors(origins:"*", methods:"*", headers:"*")]
         public 
             Season GetSeason(int? temperature)
         {
